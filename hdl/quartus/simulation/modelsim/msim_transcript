@@ -12,36 +12,31 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src {C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src/sum1bcc.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:28:14 on Sep 15,2020
+# Start time: 11:28:11 on Sep 16,2020
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src" C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src/sum1bcc.v 
 # -- Compiling module sum1bcc
 # 
 # Top level modules:
 # 	sum1bcc
-# End time: 22:28:14 on Sep 15,2020, Elapsed time: 0:00:00
+# End time: 11:28:11 on Sep 16,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.sum1bcc
 # vsim work.sum1bcc 
-# Start time: 22:28:50 on Sep 15,2020
-# Loading work.sum1bcc
-add wave -position insertpoint  \
-sim:/sum1bcc/S
-vsim work.sum1bcc
-# End time: 22:39:52 on Sep 15,2020, Elapsed time: 0:11:02
-# Errors: 0, Warnings: 0
-# vsim work.sum1bcc 
-# Start time: 22:39:52 on Sep 15,2020
-# Loading work.sum1bcc
-vsim work.sum1bcc
-# End time: 22:43:01 on Sep 15,2020, Elapsed time: 0:03:09
-# Errors: 0, Warnings: 0
-# vsim work.sum1bcc 
-# Start time: 22:43:01 on Sep 15,2020
+# Start time: 11:28:52 on Sep 16,2020
 # Loading work.sum1bcc
 add wave sim:/sum1bcc/*
+force -freeze sim:/sum1bcc/A 1 0
 force -freeze sim:/sum1bcc/B 1 0
+force -freeze sim:/sum1bcc/Ci 0 0
 run
+force -freeze sim:/sum1bcc/A 0 0
 run
-# End time: 08:30:34 on Sep 16,2020, Elapsed time: 9:47:33
+restart
+run
+force -freeze sim:/sum1bcc/A 1 0, 0 {50 ps} -r 100
+force -freeze sim:/sum1bcc/B 1 0, 0 {100 ps} -r 200
+force -freeze sim:/sum1bcc/Ci 1 0, 0 {200 ps} -r 400
+run
+# End time: 12:15:13 on Sep 16,2020, Elapsed time: 0:46:21
 # Errors: 0, Warnings: 0
