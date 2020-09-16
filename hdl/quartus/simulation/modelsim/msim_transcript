@@ -1,5 +1,5 @@
 # Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
-# do sum1bcc_run_msim_rtl_verilog.do
+# do lab01-sumador_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
@@ -10,30 +10,36 @@
 # Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/arquitecturaProcesadores/lab00/hdl/src {C:/Users/UECCI/Documents/GitHub/arquitecturaProcesadores/lab00/hdl/src/sum1bcc.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src {C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src/sum1bcc.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:34:05 on Sep 15,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/UECCI/Documents/GitHub/arquitecturaProcesadores/lab00/hdl/src" C:/Users/UECCI/Documents/GitHub/arquitecturaProcesadores/lab00/hdl/src/sum1bcc.v 
+# Start time: 22:28:14 on Sep 15,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src" C:/Users/UECCI/Documents/GitHub/UNAL/Digital1-2020-2/lab01/hdl/src/sum1bcc.v 
 # -- Compiling module sum1bcc
 # 
 # Top level modules:
 # 	sum1bcc
-# End time: 21:34:05 on Sep 15,2020, Elapsed time: 0:00:00
+# End time: 22:28:14 on Sep 15,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.sum1bcc
 # vsim work.sum1bcc 
-# Start time: 21:34:42 on Sep 15,2020
+# Start time: 22:28:50 on Sep 15,2020
 # Loading work.sum1bcc
 add wave -position insertpoint  \
-sim:/sum1bcc/A \
-sim:/sum1bcc/B \
-sim:/sum1bcc/Ci \
-sim:/sum1bcc/Cout \
-sim:/sum1bcc/S \
-sim:/sum1bcc/st
-force -freeze sim:/sum1bcc/A 1 0
+sim:/sum1bcc/S
+vsim work.sum1bcc
+# End time: 22:39:52 on Sep 15,2020, Elapsed time: 0:11:02
+# Errors: 0, Warnings: 0
+# vsim work.sum1bcc 
+# Start time: 22:39:52 on Sep 15,2020
+# Loading work.sum1bcc
+vsim work.sum1bcc
+# End time: 22:43:01 on Sep 15,2020, Elapsed time: 0:03:09
+# Errors: 0, Warnings: 0
+# vsim work.sum1bcc 
+# Start time: 22:43:01 on Sep 15,2020
+# Loading work.sum1bcc
+add wave sim:/sum1bcc/*
 force -freeze sim:/sum1bcc/B 1 0
-force -freeze sim:/sum1bcc/Ci 1 0, 0 {50 ps} -r 100
 run
 run
