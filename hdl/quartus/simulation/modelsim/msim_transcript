@@ -43,3 +43,5 @@ add wave sim:/sum1bcc/*
 force -freeze sim:/sum1bcc/B 1 0
 run
 run
+# End time: 08:30:34 on Sep 16,2020, Elapsed time: 9:47:33
+# Errors: 0, Warnings: 0
