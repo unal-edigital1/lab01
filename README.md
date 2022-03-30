@@ -1,5 +1,5 @@
-# lab01- sumador 
-laboratorio 01 introducción a HDL
+# lab02- sumador $B
+
 
 En esta plantilla debe adicionar la documentación del laboratorio
 
