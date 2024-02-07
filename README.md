@@ -1,4 +1,4 @@
-# lab02- sumador $B
+# lab02- sumador 4B
 
 
 En esta plantilla debe adicionar la documentación del laboratorio
